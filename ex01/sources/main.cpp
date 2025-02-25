@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:01:10 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/25 15:10:42 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/02/25 16:11:44 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 int main()
 {
     Contact contact;
+    PhoneBook pB;
     std::string command;
 
     std::cout << "Welcome to your PhoneBook -> [ADD, SEARCH or EXIT]" << std::endl;
@@ -38,6 +39,10 @@ int main()
             break;
         }
         //condition else pour dire que tout autre commande est fausse
+        else 
+        {
+            pB.showInstructions();
+        }
     }
     return 0;
 }
