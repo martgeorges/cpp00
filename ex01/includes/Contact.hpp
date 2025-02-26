@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 10:00:39 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/25 14:58:39 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/02/26 10:44:26 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ class Contact
     
     void    setInfo();
     void    displayInfo() const;
+	std::string	getFirstname() const;
+	std::string getLastname() const;
+	std::string getNickname() const;
 };
 
 #endif

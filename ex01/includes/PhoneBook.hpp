@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:16:10 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/25 16:06:55 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/02/26 11:28:32 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <cstdlib>
 # include <cstring>
 # include <iostream>
+# include <iomanip>
+# include <string>
 
 class PhoneBook
 {
@@ -28,7 +30,8 @@ class PhoneBook
   public:
 	PhoneBook();
 	void addContact();
-    void showInstructions();
+    void showInstructions() const;
+	void displayContacts() const;
 };
 
 #endif

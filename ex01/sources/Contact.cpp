@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 11:30:19 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/25 15:01:21 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/02/26 10:44:20 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 
 Contact::Contact()
 {
-    std::cout << "Constructor called" << std::endl;
+    //std::cout << "Constructor called" << std::endl;
 }
 
 Contact::~Contact()
 {
+    //std::cout << "Destructor called" << std::endl;
 }
 
 void    Contact::setInfo() {
@@ -45,4 +46,16 @@ void    Contact::displayInfo() const {
     std::cout << "Nickname : " << _nickName << std::endl;
     std::cout << "Phone Number : " << _phoneNumber << std::endl;
     std::cout << "Darkest Secret : " << _darkestSecret << std::endl;
+}
+
+std::string Contact::getFirstname() const {
+    return _firstName;
+}
+
+std::string Contact::getLastname() const {
+    return _lastName;
+}
+
+std::string Contact::getNickname() const{
+    return _nickName;
 }

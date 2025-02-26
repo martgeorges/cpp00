@@ -6,7 +6,7 @@
 #    By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/24 14:53:37 by mgeorges          #+#    #+#              #
-#    Updated: 2025/02/25 16:08:54 by mgeorges         ###   ########.fr        #
+#    Updated: 2025/02/26 10:40:51 by mgeorges         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,10 +21,12 @@ SRCS		=	sources/main.cpp \
 			
 OBJS		=	$(SRCS:.cpp=.o)
 
+GREEN = \033[1;32m
+
 all: 	$(NAME)
 
 $(NAME): $(OBJS)
-		@echo "Compiling $(NAME)..."
+		@echo "$(GREEN)Compiling $(NAME)... $(C++_FLAGS)"
 		@$(C++) $(C++_FLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp
