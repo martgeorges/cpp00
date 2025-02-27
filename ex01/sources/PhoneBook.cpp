@@ -6,18 +6,18 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:55:01 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/27 09:08:24 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/02/27 11:48:38 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : _index(1), _full(false) {}
+PhoneBook::PhoneBook() : _index(0), _full(false) {}
 
 void    PhoneBook::addContact() {
     if (_index == 8)
     {
-        _index = 1;
+        _index = 0;
         _full = true;
     }
     _contacts[_index].setInfo();
@@ -38,8 +38,8 @@ void    PhoneBook::displayContacts() const {
     else {
         maxContacts = _index;
     }
-    for (int i = 1; i < maxContacts; i++) {
-        std::cout << "|" << std::setw(10) << i << "|";
+    for (int i = 0; i < maxContacts; i++) {
+        std::cout << "|" << std::setw(10) << i + 1 << "|";
         std::string  firstName = _contacts[i].getFirstname();
         if (firstName.length() > 10)
         {
@@ -64,7 +64,7 @@ void    PhoneBook::displayContacts() const {
 }
 
 void    PhoneBook::showInstructions() const {
-    std::cout << "Invalid command. Use -> [ADD, SEARCH or EXIT]" << std::endl;
+    std::cout << "\033[31mError: Invalid command: Use -> [ADD, SEARCH or EXIT]\033[0m" << std::endl;
 }
 
 Contact PhoneBook::getContact(int index) {
