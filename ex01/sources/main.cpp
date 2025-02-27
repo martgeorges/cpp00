@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:01:10 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/27 11:39:02 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/02/27 13:54:12 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ int main()
                 if (input.length() == 1 && input[0] >= '1' && input[0] <= '8')
                 {
                     index = input[0] - '0';
-                    if (index <= pB.getContactCount())
+                    if (index > 0 && index <= pB.getContactCount())
                     {
-                      pB.getContact(index).displayInfo();  
+                      pB.getContact(index - 1).displayInfo();  
                     }
                     else
                     {
