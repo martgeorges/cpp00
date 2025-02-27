@@ -6,21 +6,27 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 11:30:19 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/26 10:44:20 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/02/27 09:16:50 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Contact.hpp"
 //#include "../includes/PhoneBook.hpp"
 
+static int  contactCount = 0;
+
 Contact::Contact()
 {
     //std::cout << "Constructor called" << std::endl;
+    contactCount++;
 }
 
 Contact::~Contact()
 {
     //std::cout << "Destructor called" << std::endl;
+    if (contactCount > 0) {
+        contactCount--;
+    }
 }
 
 void    Contact::setInfo() {

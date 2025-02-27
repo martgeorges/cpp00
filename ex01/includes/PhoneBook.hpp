@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:16:10 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/26 11:28:32 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/02/27 08:45:05 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ class PhoneBook
 	void addContact();
     void showInstructions() const;
 	void displayContacts() const;
+	Contact getContact(int index);
+	int getContactCount() const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:01:10 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/26 10:15:08 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/02/27 09:21:39 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,30 +25,50 @@ int main()
     {
         std::cout << "Enter command: ";
         std::getline(std::cin, command);
-        //condition if pour le ADD
         if (command == "ADD")
         {
-            //contact.setInfo();
             pB.addContact();
+            std::cout << "\033[32mContact added !\033[0m" << std::endl;
         }
-        //condition else if  pour le SEARCH
         else if (command == "SEARCH")
         {
+            std::string input;
+            int index = -1;
+            
             pB.displayContacts();
-            //doit trouver l'index, si pas nombre message d'erreur
-            std::cout << "Search details about contact type -> [index]:";
-            std::getline(std::cin, command);
-            //affiche la liste de l'index donné dans l'input
-            //contact.displayInfo();
+            std::cout << "\033[32mType [X] to exit search mode\033[0m" << std::endl;
+            while (true) {
+                std::cout << "Search details about contact type -> [index]:";
+                std::getline(std::cin, input);
+                if (input == "X") 
+                {
+                    std::cout << "\033[32mExiting search...\033[0m" << std::endl;
+                    break;
+                }
+                if (input.length() == 1 && input[0] >= '1' && input[0] <= '8')
+                {
+                    index = input[0] - '0';
+                    if (index < pB.getContactCount())
+                    {
+                      pB.getContact(index).displayInfo();  
+                    }
+                    else
+                    {
+                        std::cout << "\033[31mError : No contact for this number yet.\033[0m" << std::endl;
+                    }
+                }
+                else
+                {
+                    std::cout << "\033[31mError : input should be numeric between 1 and 8 .\033[0m" << std::endl;
+                }
+            }
         }
-        //exit
         else if (command == "EXIT")
         {
-            std::cout << "Exiting program";
+            std::cout << "\033[31m[Exiting program]...\033[0m" << std::endl;
             break;
         }
         //condition else if pour le controle D pour pas que ca crash
-        //condition else pour dire que tout autre commande est fausse
         else 
         {
             pB.showInstructions();
