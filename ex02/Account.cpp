@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 08:33:20 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/03/07 13:30:05 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/03/07 14:03:07 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,12 @@ void    Account::_displayTimestamp(void) {
               << "]" << std::endl;
 }
 
+void    Account::displayAccountsInfos(void) {
+    _displayTimestamp();
+    std::cout << " accounts:" << Account::getNbAccounts() << ";";
+    std::cout << "total:" << Account::getTotalAmount() << ";";
+    std::cout << "";
+}
 
 int Account::getNbAccounts(void) {
     return (Account::_nbAccounts);
@@ -74,8 +80,8 @@ int Account::getNbWithdrawals(void) {
     return (Account::_nbWithdrawals);
 }
 
-int main()
+/*int main()
 {
     //Account::_displayTimestamp();
     return(0);
-}
+}*/
