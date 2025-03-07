@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:01:10 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/27 13:54:12 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/03/03 10:48:54 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,13 @@ int main()
     while (true)
     {
         std::cout << "\033[33m$>\033[0mEnter command: ";
-        std::getline(std::cin, command);
+        //std::getline(std::cin, command))
+        if (!std::getline(std::cin, command))
+        {
+            std::cout << std::endl;
+            std::cout << "\033[31m[CTRL+D pressed, exiting program...]\033[0m";
+            break ;
+        }
         if (command == "ADD")
         {
             pB.addContact();
@@ -39,7 +45,13 @@ int main()
             while (true) 
             {
                 std::cout << "Search details about contact type -> [index]:";
-                std::getline(std::cin, input);
+                //std::getline(std::cin, input);
+                if (!std::getline(std::cin, input))
+                {
+                    std::cout << std::endl;
+                    std::cout << "\033[31m[CTRL+D pressed, exiting program...]\033[0m";
+                    break ;
+                }
                 if (input == "X") 
                 {
                     std::cout << "\033[32mExiting search...\033[0m" << std::endl;
@@ -68,7 +80,6 @@ int main()
             std::cout << "\033[31m[Exiting program]...\033[0m" << std::endl;
             break;
         }
-        //condition else if pour le controle D pour pas que ca crash
         else 
         {
             pB.showInstructions();
