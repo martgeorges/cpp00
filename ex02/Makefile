@@ -6,7 +6,7 @@
 #    By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/28 08:32:03 by mgeorges          #+#    #+#              #
-#    Updated: 2025/03/07 13:12:51 by mgeorges         ###   ########.fr        #
+#    Updated: 2025/03/12 16:24:03 by mgeorges         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	=	tests
 
 C++		=	c++
 
-C++_FLAGS	=	-Wall -Wextra -Werror -std=c++98
+C++_FLAGS	=	-Wall -Wextra -Werror -std=c++98 
 
 SRCS		=	Account.cpp tests.cpp 
 			
