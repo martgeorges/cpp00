@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 08:33:20 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/03/07 14:03:07 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/03/12 13:39:42 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,16 @@ Account::~Account(void) {
     std::cout << "closed" << std::endl;
 }
 
+
+// displaytime stamp() index: + amount: + deposits + withdrawals: -> endl;
+void    Account::displayStatus(void) const {
+    Account::_displayTimestamp();
+    std::cout << "index:" << this->_accountIndex << ";";
+    std::cout << "amount:" << this->_amount << ";";
+    std::cout << "deposits:" << this->_nbDeposits << ";";
+    std::cout << "withdrawals:" << this->_nbWithdrawals << std::endl;
+}
+
 void    Account::_displayTimestamp(void) {
     std::time_t now = std::time(nullptr);
     std::tm* localTime = std::localtime(&now);
@@ -59,9 +69,16 @@ void    Account::_displayTimestamp(void) {
 
 void    Account::displayAccountsInfos(void) {
     _displayTimestamp();
-    std::cout << " accounts:" << Account::getNbAccounts() << ";";
+    std::cout << "accounts:" << Account::getNbAccounts() << ";";
     std::cout << "total:" << Account::getTotalAmount() << ";";
-    std::cout << "";
+    std::cout << "deposits:" << Account::getNbDeposits() << ";";
+    std::cout << "withdrawals:" << Account::getNbWithdrawals() << std::endl;
+}
+
+int Account::checkAmount(void) const {
+    if (this->_totalAmount < 0)
+        return (1);
+    return (0);
 }
 
 int Account::getNbAccounts(void) {
