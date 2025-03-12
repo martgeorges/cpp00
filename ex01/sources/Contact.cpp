@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 11:30:19 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/27 10:26:25 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/03/12 20:35:56 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void    Contact::setInfo() {
 
     std::cout << "Nickname : ";
     std::getline(std::cin, _nickName);
-
+    
     std::cout << "Phone Number : ";
     std::getline(std::cin, _phoneNumber);
 

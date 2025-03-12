@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 08:33:20 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/03/12 16:43:28 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/03/12 16:46:55 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ void    Account::_displayTimestamp(void) {
               << std::setw(2) << std::setfill('0') << (localTime->tm_hour)
               << std::setw(2) << std::setfill('0') << (localTime->tm_min)
               << std::setw(2) << std::setfill('0') << (localTime->tm_sec)
-              << "]" /*std::endl*/;
+              << "]" << " ";
 }
 
 void    Account::displayAccountsInfos(void) {
