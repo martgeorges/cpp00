@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 15:01:10 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/03/03 10:48:54 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/03/13 09:22:31 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int main()
     while (true)
     {
         std::cout << "\033[33m$>\033[0mEnter command: ";
-        //std::getline(std::cin, command))
         if (!std::getline(std::cin, command))
         {
             std::cout << std::endl;
@@ -45,7 +44,6 @@ int main()
             while (true) 
             {
                 std::cout << "Search details about contact type -> [index]:";
-                //std::getline(std::cin, input);
                 if (!std::getline(std::cin, input))
                 {
                     std::cout << std::endl;

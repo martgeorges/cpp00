@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 11:30:19 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/03/13 08:04:42 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/03/13 09:22:22 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@ static int  contactCount = 0;
 
 Contact::Contact()
 {
-    //std::cout << "Constructor called" << std::endl;
     contactCount++;
 }
 
 Contact::~Contact()
 {
-    //std::cout << "Destructor called" << std::endl;
     if (contactCount > 0) {
         contactCount--;
     }
