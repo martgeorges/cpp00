@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:55:01 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/27 11:48:38 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/03/13 07:14:38 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void    PhoneBook::addContact() {
     _contacts[_index].setInfo();
     _index++;
 }
+
 
 void    PhoneBook::displayContacts() const {
     std::cout << " ___________________________________________ " << std::endl;

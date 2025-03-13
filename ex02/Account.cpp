@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 08:33:20 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/03/12 16:46:55 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/03/13 07:06:40 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int Account::_totalNbWithdrawals = 0;
 int Account::_nbWithdrawals = 0;
 
 Account::Account(int initial_deposit) {
-
-    //std::cout << "Constructor called" << std::endl;
     this->_amount = initial_deposit;
     this->_nbDeposits = 0;
     this->_nbWithdrawals = 0;
@@ -37,7 +35,6 @@ Account::Account(int initial_deposit) {
 }
 
 Account::~Account(void) {
-    //std::cout << "Destructor called" << std:: endl;
     Account::_displayTimestamp();
     std::cout << "index:" << this->_accountIndex << ";";
     std::cout << "amount:" << this->_amount << ";";
@@ -89,7 +86,7 @@ void    Account::displayStatus(void) const {
 }
 
 void    Account::_displayTimestamp(void) {
-    std::time_t now = std::time(nullptr);
+    std::time_t now = std::time(NULL);
     std::tm* localTime = std::localtime(&now);
 
     std::cout << "["

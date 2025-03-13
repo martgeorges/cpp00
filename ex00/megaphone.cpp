@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 12:46:52 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/02/24 16:11:58 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/03/13 08:03:39 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int main(int ac, char **av)
             j++;
         }
         std::cout << " ";
+        std::cout << std::endl;
+        //std::cout << " ";
         i++;
     }
     return 0;

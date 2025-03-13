@@ -6,7 +6,7 @@
 /*   By: mgeorges <mgeorges@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 10:00:39 by mgeorges          #+#    #+#             */
-/*   Updated: 2025/03/12 20:25:13 by mgeorges         ###   ########.fr       */
+/*   Updated: 2025/03/13 07:26:42 by mgeorges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class Contact
 	std::string _nickName;
 	std::string _phoneNumber;
 	std::string _darkestSecret;
+	
+	bool isOnlyDigits(const std::string& str);
 
   public:
 	Contact();
