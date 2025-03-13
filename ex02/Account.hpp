@@ -50,7 +50,7 @@ private:
 	int				_accountIndex;
 	int				_amount;
 	int				_nbDeposits;
-	static int		_nbWithdrawals;
+	int				_nbWithdrawals;
 
 	Account( void );
 
